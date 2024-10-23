@@ -137,11 +137,12 @@ function makeBookElement(book) {
 
     const bookYear = document.createElement('p');
     bookYear.innerText = book.year;
+    bookYear.setAttribute(data_testid, 'bookItemYear');
 
-    const buttonCompleted = createButton('selesai dibaca', () => bookCompleted(book.id), 'button-add');
-    const buttonDelete = createButton('Hapus', () => bookRemoved(book.id), 'button-delete');
-    const buttonInCompleted = createButton('belum selesai', () => bookInCompleted(book.id), 'button-add');
-    const buttonEdit = createButton('Edit buku', () => handleEditBook(book), 'button-edit');
+    const buttonCompleted = createButton('selesai dibaca', () => bookCompleted(book.id), 'button-add', 'bookItemIsCompleteButton');
+    const buttonDelete = createButton('Hapus', () => bookRemoved(book.id), 'button-delete', 'bookItemDeleteButton');
+    const buttonInCompleted = createButton('belum selesai', () => bookInCompleted(book.id), 'button-add', 'bookItemIsCompleteButton');
+    const buttonEdit = createButton('Edit buku', () => handleEditBook(book), 'button-edit', 'bookItemEditButton');
 
     const buttonContainer = document.createElement('div');
     buttonContainer.classList.add('button-container');
@@ -159,9 +160,10 @@ function makeBookElement(book) {
 }
 
 
-const createButton = (text, onClick, style) => {
+const createButton = (text, onClick, style, data_test) => {
     const button = document.createElement('button');
     button.innerText = text;
+    button.setAttribute(data_testid, data_test);
     button.classList.add(style);
     button.addEventListener('click', onClick);
     return button;
