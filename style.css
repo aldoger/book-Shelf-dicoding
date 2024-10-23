@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; 
+}
+
+header {
+    text-align: center;
+    background-color: #0396eb;
+    padding: 20px;
+}
+
+h1 {
+    color: aliceblue;
+    margin: 0;
+    font-size: 2.5em; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #0396eb;
+}
+
+main section {
+    width: 500px;
+    padding: 20px;
+    margin-top: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    background-color: white; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s; 
+}
+
+main section:hover {
+    transform: translateY(-5px); 
+}
+
+#bookForm div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; 
+}
+
+#bookForm .complete{
+    display: flex;                
+    flex-direction: row;        
+    margin-bottom: 15px;
+    gap: 10px;
+    align-items: center;
+}
+
+#bookForm .complete input{
+    margin-bottom: 7px;
+}
+
+
+#searchBook button{
+    padding-left: 50%;
+    padding-right: 50%;
+}
+
+#searchBook input{
+    margin-bottom: 10px;
+}
+
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold; 
+}
+
+input[type="text"],
+input[type="number"],
+input[type="checkbox"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    width: 100%; 
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1); 
+}
+
+input[type="checkbox"] {
+    width: auto; 
+}
+
+.button-container {
+    display: flex;             
+    gap: 10px;                 
+}
+
+button {
+    padding: 10px 20px; 
+    background-color: #0396eb; 
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.button-add{
+    background-color: #ffffff;
+    border: 1px solid rgb(23, 187, 23);
+    color: rgb(23, 187, 23);
+}
+
+.button-delete{
+    background-color: #ffffff;
+    border: 1px solid rgb(213, 10, 10);
+    color: rgb(213, 10, 10);
+}
+
+.button-edit{
+    background-color: #ffffff;
+    border: 1px solid rgb(182, 213, 10);
+    color: rgb(182, 213, 10);
+}
+
+.button-add:hover{
+    background-color: rgb(23, 187, 23);
+    border: 1px solid rgb(23, 187, 23);
+    color: #ffffff;
+}
+
+.button-delete:hover{
+    background-color: rgb(213, 10, 10);
+    border: 1px solid rgb(213, 10, 10);
+    color: #ffffff;
+}
+
+.button-edit:hover{
+    background-color: rgb(182, 213, 10);
+    border: 1px solid rgb(182, 213, 10);
+    color: #ffffff;
+}
+
+button:hover {
+    background-color: #0276b0; 
+}
+
+h2 {
+    margin: 0 0 10px 0; 
+    font-size: 1.5em; 
+}
+
+h3 {
+    margin: 0; 
+    font-size: 1.3em; 
+}
+
+p {
+    margin: 5px 0; 
+}
+
+div[data-bookid] {
+    width: 100%; 
+    margin-top: 10px; 
+    padding: 10px; 
+    border: solid 1px #ccc; 
+    border-radius: 5px; 
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.prompt {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+  
+.hidden {
+    display: none;
+}
+  
+.prompt input{
+    width: 90%;
+}
+
+#updateSubmit{
+    margin-top: 10px;
+}
